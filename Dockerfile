@@ -1,7 +1,7 @@
 FROM centos:6
 MAINTAINER sawanoboriyu@higanworks.com
 
-RUN yum install curl git tar -y
+RUN yum install curl tar -y
 
 ## Chef Client and librarian
 RUN eval "$(curl chef.sh)" && \
