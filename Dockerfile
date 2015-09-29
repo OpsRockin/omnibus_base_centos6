@@ -2,7 +2,7 @@ FROM centos:6
 MAINTAINER sawanoboriyu@higanworks.com
 
 RUN yum update -y
-RUN yum install curl git -y
+RUN yum install curl git tar -y
 
 ## Chef DK
 RUN curl -s chef.sh | bash -s -- -P chefdk
