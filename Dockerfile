@@ -1,13 +1,8 @@
-FROM ubuntu:trusty
+FROM centos:6
 MAINTAINER sawanoboriyu@higanworks.com
 
-RUN apt-get -y update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confnew" -o Dpkg::Options::="--force-confdef" upgrade
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confnew" --force-yes -fuy dist-upgrade
-RUN apt-get -y autoremove
-
-RUN apt-get -y update
-RUN apt-get -y install curl git
+RUN yum update -y
+RUN yum install curl git -y
 
 ## Chef DK
 RUN curl -s chef.sh | bash -s -- -P chefdk
