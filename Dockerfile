@@ -1,7 +1,7 @@
 FROM centos:6
 MAINTAINER sawanoboriyu@higanworks.com
 
-RUN yum install curl tar util-linux-ng -y
+RUN yum install curl tar util-linux-ng fakeroot -y
 
 ## Prepare for Chef
 RUN mkdir /root/chefrepo
